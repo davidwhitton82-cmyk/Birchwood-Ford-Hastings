@@ -13,16 +13,34 @@
         text-align: center;
     }
 
+    /* HEADER IMAGE WRAPPER */
+    .header-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
     .header-image {
         width: 100%;
         display: block;
     }
 
+    /* OVERLAPPING LOGO */
     .logo {
         width: 140px;
-        height: auto;
-        margin: 20px auto 10px;
+        height: 140px;
         border-radius: 50%;
+        position: absolute;
+        bottom: -70px; /* 50% overlap */
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        background: white;
+        object-fit: cover;
+    }
+
+    /* SPACING BELOW LOGO */
+    .content {
+        margin-top: 90px; /* pushes text down so logo doesn't overlap it */
     }
 
     h2 {
@@ -73,26 +91,28 @@
 
 <body>
 
-<!-- Header Image -->
-<img src="Picture2.png" class="header-image" alt="Header">
+<!-- HEADER WITH OVERLAPPING LOGO -->
+<div class="header-wrapper">
+    <img src="Picture2.png" class="header-image" alt="Header">
+    <img src="images(1).jpg" class="logo" alt="BMG Logo">
+</div>
 
-<!-- Logo -->
-<img src="images(1).jpg" class="logo" alt="BMG Logo">
+<!-- MAIN CONTENT -->
+<div class="content">
+    <h2>Please give us a like and follow</h2>
+    <h3>Birchwood Ford Hastings</h3>
 
-<!-- Text -->
-<h2>Please give us a like and follow</h2>
-<h3>Birchwood Ford Hastings</h3>
+    <!-- Social Buttons -->
+    <a class="button" href="https://www.instagram.com/ford_hastings/" target="_blank">Instagram</a>
+    <a class="button" href="https://www.facebook.com/p/Birchwood-Ford-Hastings-61556103328265/" target="_blank">Facebook</a>
+    <a class="button" href="https://www.tiktok.com/@fordhastings" target="_blank">TikTok</a>
 
-<!-- Social Buttons -->
-<a class="button" href="https://www.instagram.com/ford_hastings/" target="_blank">Instagram</a>
-<a class="button" href="https://www.facebook.com/p/Birchwood-Ford-Hastings-61556103328265/" target="_blank">Facebook</a>
-<a class="button" href="https://www.tiktok.com/@fordhastings" target="_blank">TikTok</a>
-
-<!-- Contact Buttons -->
-<div class="contact-row">
-    <a class="contact-button" href="tel:01424755000">📞 Call Us</a>
-    <a class="contact-button" href="mailto:hastingssales@birchwoodgroup.co.uk">✉️ Email Us</a>
-    <a class="contact-button" href="https://www.birchwoodgroup.co.uk/ford/" target="_blank">🌐 Visit Website</a>
+    <!-- Contact Buttons -->
+    <div class="contact-row">
+        <a class="contact-button" href="tel:01424755000">📞 Call Us</a>
+        <a class="contact-button" href="mailto:hastingssales@birchwoodgroup.co.uk">✉️ Email Us</a>
+        <a class="contact-button" href="https://www.birchwoodgroup.co.uk/ford/" target="_blank">🌐 Visit Website</a>
+    </div>
 </div>
 
 </body>
